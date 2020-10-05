@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <title>Starbhak Mart</title>
+    <style>
+    .container{
+        width: 700px;
+        height: 650px;
+    }.kode_pro {
+        background-color: white;
+        border: #e74c3c;
+    }
+    body{
+        background-color:  #44749d;
+    }
+    img{
+      width: 100px;
+      height: 100px;
+    }
+    .gambar{
+      width: 20px;
+      height: 20px;
+    }
+    </style>
+  </head>
+  <body>
+
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
+      <img src="Logoindofoot.png" width="100" height="30" alt="" loading="lazy">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#About">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#pencapaian">pencapaian</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Produk">Produk</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <img src="Logoindofoot.png" width="100" height="30" alt="" loading="lazy">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#carouselExampleCaptions">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#About">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Produk">Produk</a>
+          </li>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+
+<div class="container mt-4 border border-dark rounded" style="background-color:white;">
+<div class="container p-2">
+    <h4><center>FORM INPUT MASTER DAN STOCK DATA BARANG</center></h4>
+ 
+        <div class="form-group row mt-4">
+          <label for="kodeproduk" class="col-sm-3  col-form-label">Kode Produk</label>
+          <div class="col-sm-6">
+          <input type class="mb-2 kode_pro mt-2" id="txt_kodeproduk"  disabled>
+          </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="namaproduk" class="col-sm-3 col-form-label">Nama Produk</label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control mb-4" id="txt_namaproduk">
+            </div>
+        </div>
+        
+        <div class="form-group row">
+            <label for="hargaproduk" class="col-sm-3 col-form-label">Harga Produk</label>
+            <div class="col-sm-8">
+                <input type="text" class="form-control mb-4" id="txt_hargaproduk">
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="satuan" class="col-sm-3 col-form-label">Satuan</label>
+            <div class="col-sm-8">
+                <input type="text" class="mb-4 form-control" list="satuan_list" id="txt_satuan" placeholder="satuan">
+                <datalist id="satuan_list">
+                    <option >Plastik</option>
+                    <option >Piring</option>
+                    <option >Mangkok</option>
+                    <option >Styrofoam</option>
+                    <option >Gelas</option>
+                </datalist>
+
+            <!-- <select class="form-control mb-4" id="txt_satuan">
+              <option value="plastik">Plastik</option>
+              <option value="piring">Piring</option>
+              <option value="mangkok">Mangkok</option>
+              <option value="styrofoam">Styrofoam</option>
+              <option value="styrofoam">Gelas</option>
+            </select> -->
+            </div>
+        </div>
+
+        <div class="form-group row">
+            <label for="kategori" class="col-sm-3 col-form-label">Kategori</label>
+            <div class="col-sm-8">
+            <input type="text" class="mb-4 form-control" list="kategori_list" id="txt_kategori" onchange="kodepro(this.value)" placeholder="kategori">
+            <datalist id="kategori_list">
+              <option >Makanan Ringan</option>
+              <option >Makanan Berat</option>
+              <option >Minuman</option>
+            </datalist>
+            </div>
+        </div>
+    
+        <div class="form-group row">
+            <label for="stokawal" class="col-sm-3 col-form-label">Stok Awal</label>
+            <div class="col-sm-8">
+            <input type="text" class="form-control mb-4" id="txt_stokawal">
+            </div>
+        </div>
+
+        <div class="form-group row">
+          <label for="urlgambar" class="col-sm-3 col-form-label">URL Gambar</label>
+          <div class="col-sm-8">
+            <input type="url" class="form-control" id="url_gambar">
+          </div>
+        </div>
+        
+        <div class="p-2">
+          <button class="btn btn-primary mb-4" id="button1" onclick="add()">Simpan</button>
+          <button class="btn btn-danger mb-4" id="button" onclick="batal()">batal</button>
+          <button class="btn btn-success mb-4" id="button2" onclick="editsimpan()">Simpan</button>
+        </div>
+</div>
+</div>
+        
+    <div class="container rounded" style="width: 10000px; text-align: center;" > 
+        <table class="table table-bordered mt-4" >
+          <thead class="table-secondary">
+            <tr>
+              <th scope="col">No</th>
+              <th scope="col">kode produk</th>
+              <th scope="col">nama produk</th>
+              <th scope="col">harga produk</th>
+              <th scope="col">satuan</th>
+              <th scope="col">kategori</th>
+              <th scope="col">Gambar Produk</th>
+              <th scope="col">stok awal</th>
+              <th scope="col">Action</th>
+            </tr>
+          </thead>
+          <tbody class="bg-secondary" id="tampildata">
+          </tbody>
+        </table>
+    </div>
+    
+    <footer>
+    <div class="card text-white bg-dark">
+        <div class="card-header">Indofood</div>
+        <div class="card-body">
+          <h5 class="card-title text-white bg-dark border-dark">Hubungi</h5>
+          <ul>
+          <li><a class="" href="https://www.instagram.com/sufianto__"><img src="ig.jpg" width="20" height="20" alt="" class="gambar rounded"> instagram</a></li>
+          <li><a class="" href="https://portal.smktarunabhakti.net"><img src="tb.png" width="20" height="20" alt="" class="gambar rounded">  portal TB</a></li>
+          </ul>
+          <div class="card-footer text-white bg-dark border-dark"> <h6> Copyright © 2015 PT INDOFOOD SUKSES MAKMUR Tbk </h6></div>
+        </div>
+      </div>
+</footer>
+
+        <script>
+        var namapro = document.getElementById("txt_namaproduk").value
+        if (namapro == "") {
+            document.getElementById("button1").style.display = "inline"
+            document.getElementById("button2").style.display = "none"
+            document.getElementById("button").style.display = "none"
+        }
+            var kodeproduk = []
+            var namaproduk = []
+            var hargaproduk = []
+            var satuan = []
+            var kategori = []
+            var gambarproduk = []
+            var stokawal = []
+      
+            var tampil = document.getElementById('tampildata')
+      
+            function showData() {
+              tampil.innerHTML = ""
+      
+              for (i = 0; i <kodeproduk.length; i++) {
+                var nodata = i + 1
+                const matauang='RP.'
+                const nomor=i+1
+                kode="MD-0" + Number(i+1)
+                var txt_stokawal = Number(stokawal[i])
+                if (txt_stokawal < 5){
+                  var bg = "bg-danger"
+                }else{
+                  var bg = ""
+                }
+        
+
+                tampil.innerHTML += "<tr>" +
+                  "<th>" + nodata + "</th>" +
+                  "<td>" + kodeproduk[i] + "</td>" +
+                  "<td>" + namaproduk[i] + "</td>" +
+                  "<td>" + matauang + hargaproduk[i] + "</td>" +
+                  "<td>" + satuan[i] + "</td>" +
+                  "<td>" + kategori[i] + "</td>" +
+                  "<td>" + "<img src ='" + gambarproduk[i] +"'style='width: 100px height: 100px'alt=gambar'>" + "</td>"+
+                  "<td class="+bg+">" + stokawal[i] + "</td>" +
+                  "<td>" +
+                  "<button class='btn btn-warning'onclick='editdata(" + i +
+                  ")'>Edit</button>" +
+                  "<button class='btn btn-danger' href='#' onclick='hapusdata(" + i + ")'>Hapus</button>" +
+                  "</td>" +
+                  "</tr>"
+      
+              }
+            }      
+            showData()
+            function batal() {
+            document.getElementById('txt_kodeproduk').value = ""
+            document.getElementById('txt_namaproduk').value = ""
+            document.getElementById('txt_hargaproduk').value = ""
+            document.getElementById('txt_satuan').value = ""
+            document.getElementById('txt_kategori').value = ""
+            document.getElementById('url_gambar').value = ""
+            document.getElementById('txt_stokawal').value = ""
+
+             document.getElementById("button1").style.display = "inline"
+             document.getElementById("button2").style.display = "none"
+             document.getElementById("button").style.display = "none"
+            }
+            function add() {
+              var produkbaru = document.getElementById('txt_kodeproduk').value
+              var namabaru = document.getElementById('txt_namaproduk').value
+              var hargabaru = document.getElementById('txt_hargaproduk').value
+              var satuanbaru = document.getElementById('txt_satuan').value
+              var kategoribaru = document.getElementById('txt_kategori').value
+              var gambarbaru = document.getElementById('url_gambar').value
+              var stokbaru = document.getElementById('txt_stokawal').value
+      
+              if (namabaru == '') {
+                alert('anda belum memasukan data')
+              }else{
+                kodeproduk.push(produkbaru)
+                namaproduk.push(namabaru)
+                hargaproduk.push(hargabaru)
+                satuan.push(satuanbaru)
+                kategori.push(kategoribaru)
+                gambarproduk.push(gambarbaru)
+                stokawal.push(stokbaru)
+                showData()
+                document.getElementById('txt_kodeproduk').value = ""
+                document.getElementById('txt_namaproduk').value = ""
+                document.getElementById('txt_hargaproduk').value = ""
+                document.getElementById('txt_satuan').value = ""
+                document.getElementById('txt_kategori').value = ""
+                document.getElementById('url_gambar').value = ""
+                document.getElementById('txt_stokawal').value = ""
+
+              }
+            }
+      
+            function hapusdata(i) {
+              kodeproduk.splice(i, 1);
+              namaproduk.splice(i, 1);
+              hargaproduk.splice(i, 1);
+              satuan.splice(i, 1);
+              kategori.splice(i, 1);
+              gambarproduk.splice(i,1)
+              stokawal.splice(i, 1);
+              showData()
+            }
+
+var index = []
+
+function editdata(i) {
+  document.getElementById('txt_kodeproduk').value = kodeproduk[i]
+  document.getElementById('txt_namaproduk').value = namaproduk[i]
+  document.getElementById('txt_hargaproduk').value = hargaproduk[i]
+  document.getElementById('txt_satuan').value = satuan[i]
+  document.getElementById('txt_kategori').value = kategori[i]
+  document.getElementById('url_gambar').value = gambarproduk[i]
+  document.getElementById('txt_stokawal').value = stokawal[i]
+
+  document.getElementById("button1").style.display = "none"
+  document.getElementById("button2").style.display = "inline"
+  document.getElementById("button").style.display = "inline"
+  index.push(i)
+}
+
+function  editsimpan() {
+  var simpanproduk = document.getElementById('txt_kodeproduk').value
+  var simpannama = document.getElementById('txt_namaproduk').value
+  var simpanharga = document.getElementById('txt_hargaproduk').value
+  var simpansatuan = document.getElementById('txt_satuan').value
+  var simpankategori = document.getElementById('txt_kategori').value
+  var simpanurl_gambar = document.getElementById('url_gambar').value
+  var simpanstok = document.getElementById('txt_stokawal').value
+
+  document.getElementById("button1").style.display = "inline"
+  document.getElementById("button2").style.display = "none"
+  document.getElementById("button").style.display = "none"
+
+
+  if (simpannama == '') {
+    alert('anda belum memasukan data')
+  }else{
+      kodeproduk[index] = simpanproduk
+      namaproduk[index] = simpannama
+      hargaproduk[index] = simpanharga
+      satuan[index] = simpansatuan
+      kategori[index] = simpankategori
+      gambarproduk[index] = simpanurl_gambar
+      stokawal[index] = simpanstok
+
+      showData()
+      index.pop()
+
+      document.getElementById('txt_kodeproduk').value = ""
+      document.getElementById('txt_namaproduk').value = ""
+      document.getElementById('txt_hargaproduk').value = ""
+      document.getElementById('txt_satuan').value = ""
+      document.getElementById('txt_kategori').value = ""
+      document.getElementById('url_gambar').value = ""
+      document.getElementById('txt_stokawal').value = ""
+
+  }
+
+}function kodepro(value) {
+    var idkode = []
+    var kodekatagori = value.split(" ").filter(function (e) {
+        return e.trim().length > 0;
+    });
+    for (i = 0; i < kodekatagori.length; i++) {
+        if (kodekatagori.length == 1) {
+            var code = kodekatagori[i].slice(0, 2)
+        } else {
+            var code = kodekatagori[i].slice(0, 1)
+        }
+        idkode.push(code)
+    }
+    var kodepr = idkode.join("")
+    kodepr = kodepr.toUpperCase()
+    if (idkode.length == 0) {
+        document.getElementById("txt_kodeproduk").value = ''
+    } else {
+        var count = 1;
+        for (i = 0; i < kategori.length; ++i) {
+            if (kategori[i].toLowerCase() == value.toLowerCase()) {
+                count++;
+            }
+        }
+        if (count < 10) {
+            document.getElementById("txt_kodeproduk").value = kodepr + '-00' + count
+        } else if (count < 100) {
+            document.getElementById("txt_kodeproduk").value = kodepr + '-0' + count
+        } else {
+            document.getElementById("txt_kodeproduk").value = kodepr + '-' + count
+        }
+    }
+}
+    </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous">
+    </script>
+  </body>
+</html>
