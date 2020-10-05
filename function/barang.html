@@ -8,18 +8,21 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
-    <title>Starbhak Mart</title>
+    <title>INDOFOOD</title>
     <style>
     .border{
         width: 700px;
-        height: 650px;
-    }.kode_pro {
+        height: 770px;
+    }
+    .kode_pro {
         background-color: white;
         border: #e74c3c;
     }
-    /* body{
-        background-color:  #44749d;
-    } */
+   td{
+     color: black;
+     
+   }
+
     
     </style>
   </head>
@@ -173,14 +176,14 @@
   <h1>FORMULIR</h1>
   <br><br>
   </div>
-<div class="container mt-4 border border-dark rounded bg-secondary" style="background-color:white;">
-<div class="container p-2">
+<div class="container mt-4 border border-dark rounded bg-dark" style="background-color:white;">
+<div class="container p-2" style="color: white;">
     <h4><center>FORM INPUT INDOFOOD DAN STOCK DATA PRODUK</center></h4>
  
         <div class="form-group row mt-4">
           <label for="kodeproduk" class="col-sm-3  col-form-label">Kode Produk</label>
           <div class="col-sm-6">
-          <input type class="mb-2 kode_pro mt-2 bg-secondary" id="txt_kodeproduk" style="color: black;"  disabled>
+          <input type class="mb-2 kode_pro mt-2 bg-dark" id="txt_kodeproduk" style="color: white;"  disabled>
           </div>
         </div>
 
@@ -223,6 +226,21 @@
             </datalist>
             </div>
         </div>
+
+        <div class="form-group row">
+          <label for="pembayaran" class="col-sm-3 col-form-label"> </label>
+          <div class="col-sm-8">
+            <h6 class=" mb-4">(Stok Diatas 5 Akan Mendapatkan Discount 50 %)</h6>
+          </div>
+      </div>
+        
+
+        <div class="form-group row">
+          <label for="pembayaran" class="col-sm-3 col-form-label">Pembayaran </label>
+          <div class="col-sm-8">
+          <input type="text" class="form-control mb-4" id="txt_pembayaran" placeholder="Pembayaran">
+          </div>
+      </div>
     
         <div class="form-group row">
             <label for="stokawal" class="col-sm-3 col-form-label">Stok Produk</label>
@@ -248,7 +266,7 @@
        <!-- tabel nya  -->
     <div class="container rounded" style="width: 10000px; text-align: center;" > 
         <table class="table table-bordered mt-4" >
-          <thead class="table-secondary">
+          <thead class="table-dark">
             <tr>
               <th scope="col">No</th>
               <th scope="col">Kode Produk</th>
@@ -256,6 +274,9 @@
               <th scope="col">Harga Produk</th>
               <th scope="col">Satuan</th>
               <th scope="col">Kategori</th>
+              <th scope="col">Pembayaran</th>
+              <th scope="col">kembalian</th>
+              <th scope="col">Total</th>
               <th scope="col">Gambar Produk</th>
               <th scope="col">Stok Produk</th>
               <th scope="col">Action</th>
@@ -289,13 +310,14 @@
             document.getElementById("button2").style.display = "none"
             document.getElementById("button").style.display = "none"
         }
-            var kodeproduk = []
-            var namaproduk = []
-            var hargaproduk = []
-            var satuan = []
-            var kategori = []
-            var gambarproduk = []
-            var stokawal = []
+            var kodeproduk = ['MB-001']
+            var namaproduk = ['Indomie']
+            var hargaproduk = ['2000']
+            var satuan = ['Bungkus']
+            var kategori = ['Makanan Berat']
+            var pembayaran = ['2000']
+            var gambarproduk = ['file:///D:/xampp/htdocs/Tugas-Sekolah-TB/function/gambar%20nya/indomie.png']
+            var stokawal = ['1']
       
             var tampil = document.getElementById('tampildata')
       
@@ -307,13 +329,24 @@
                 const matauang='RP.'
                 const nomor=i+1
                 kode="MD-0" + Number(i+1)
+
                 var txt_stokawal = Number(stokawal[i])
                 if (txt_stokawal < 5){
                   var bg = "bg-danger"
                 }else{
                   var bg = ""
                 }
-        
+
+                var txt_stokawal = Number(stokawal[i])
+                if (txt_stokawal > 5){
+                  var Total = Number(hargaproduk[i]) * Number(0.50) //kembalian
+                        var kembalian = Number(pembayaran[i]) - Number(Total) //total/diskon
+                }else{
+                  var Total = Number(hargaproduk[i]) //kembalian
+                        var kembalian = Number(pembayaran[i]) - Number(Total) //total/diskon
+                }
+                
+
 
                 tampil.innerHTML += "<tr>" +
                   "<th>" + nodata + "</th>" +
@@ -322,12 +355,15 @@
                   "<td>" + matauang + hargaproduk[i] + "</td>" +
                   "<td>" + satuan[i] + "</td>" +
                   "<td>" + kategori[i] + "</td>" +
-                  "<td>" + "<img src ='" + gambarproduk[i] +"' style='width: 100px; height: 100px;'alt=gambar>" + "</td>"+
+                  "<th>" + matauang + pembayaran[i] + "</th>" +
+                  "<th>" + matauang + kembalian + "</th>" + //isi kembalian
+                  "<th>" + matauang + Total + "</th>" + //isi total
+                  "<td>" + "<img src ='" + gambarproduk[i] +"' style='width: 50px; height: 50px;'alt=gambar>" + "</td>"+
                   "<td class="+bg+">" + stokawal[i] + "</td>" +
                   "<td>" +
-                  "<button class='btn btn-warning'onclick='editdata(" + i +
+                  "<button class='btn btn-warning mt-2 mr-1'onclick='editdata(" + i +
                   ")'>Edit</button>" +
-                  "<button class='btn btn-danger' href='#' onclick='hapusdata(" + i + ")'>Hapus</button>" +
+                  "<button class='btn btn-danger mt-2' href='#' onclick='hapusdata(" + i + ")'>Hapus</button>" +
                   "</td>" +
                   "</tr>"
       
@@ -340,6 +376,7 @@
             document.getElementById('txt_hargaproduk').value = ""
             document.getElementById('txt_satuan').value = ""
             document.getElementById('txt_kategori').value = ""
+            document.getElementById('txt_pembayaran').value = ""
             document.getElementById('url_gambar').value = ""
             document.getElementById('txt_stokawal').value = ""
 
@@ -353,6 +390,7 @@
               var hargabaru = document.getElementById('txt_hargaproduk').value
               var satuanbaru = document.getElementById('txt_satuan').value
               var kategoribaru = document.getElementById('txt_kategori').value
+              var pembayaranbaru = document.getElementById('txt_pembayaran').value
               var gambarbaru = document.getElementById('url_gambar').value
               var stokbaru = document.getElementById('txt_stokawal').value
       
@@ -364,6 +402,7 @@
                 hargaproduk.push(hargabaru)
                 satuan.push(satuanbaru)
                 kategori.push(kategoribaru)
+                pembayaran.push(pembayaranbaru)
                 gambarproduk.push(gambarbaru)
                 stokawal.push(stokbaru)
                 showData()
@@ -372,6 +411,7 @@
                 document.getElementById('txt_hargaproduk').value = ""
                 document.getElementById('txt_satuan').value = ""
                 document.getElementById('txt_kategori').value = ""
+                document.getElementById('txt_pembayaran').value = ""
                 document.getElementById('url_gambar').value = ""
                 document.getElementById('txt_stokawal').value = ""
 
@@ -384,6 +424,7 @@
               hargaproduk.splice(i, 1);
               satuan.splice(i, 1);
               kategori.splice(i, 1);
+              pembayaran.splice(i, 1);
               gambarproduk.splice(i,1)
               stokawal.splice(i, 1);
               showData()
@@ -397,6 +438,7 @@ function editdata(i) {
   document.getElementById('txt_hargaproduk').value = hargaproduk[i]
   document.getElementById('txt_satuan').value = satuan[i]
   document.getElementById('txt_kategori').value = kategori[i]
+  document.getElementById('txt_pembayaran').value = pembayaran[i]
   document.getElementById('url_gambar').value = gambarproduk[i]
   document.getElementById('txt_stokawal').value = stokawal[i]
 
@@ -412,6 +454,7 @@ function  editsimpan() {
   var simpanharga = document.getElementById('txt_hargaproduk').value
   var simpansatuan = document.getElementById('txt_satuan').value
   var simpankategori = document.getElementById('txt_kategori').value
+  var simpanpembayaran = document.getElementById('txt_pembayaran').value
   var simpanurl_gambar = document.getElementById('url_gambar').value
   var simpanstok = document.getElementById('txt_stokawal').value
 
@@ -428,6 +471,7 @@ function  editsimpan() {
       hargaproduk[index] = simpanharga
       satuan[index] = simpansatuan
       kategori[index] = simpankategori
+      pembayaran[index] = simpanpembayaran
       gambarproduk[index] = simpanurl_gambar
       stokawal[index] = simpanstok
 
@@ -439,6 +483,7 @@ function  editsimpan() {
       document.getElementById('txt_hargaproduk').value = ""
       document.getElementById('txt_satuan').value = ""
       document.getElementById('txt_kategori').value = ""
+      document.getElementById('txt_pembayaran').value = ""
       document.getElementById('url_gambar').value = ""
       document.getElementById('txt_stokawal').value = ""
 
