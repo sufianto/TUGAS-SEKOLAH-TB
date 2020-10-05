@@ -10,30 +10,23 @@
 
     <title>Starbhak Mart</title>
     <style>
-    .container{
+    .border{
         width: 700px;
         height: 650px;
     }.kode_pro {
         background-color: white;
         border: #e74c3c;
     }
-    body{
+    /* body{
         background-color:  #44749d;
-    }
-    img{
-      width: 100px;
-      height: 100px;
-    }
-    .gambar{
-      width: 20px;
-      height: 20px;
-    }
+    } */
+    
     </style>
   </head>
   <body>
 
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
-      <img src="Logoindofoot.png" width="100" height="30" alt="" loading="lazy">
+      <img src="gambar nya/Logoindofoot.png" width="100" height="30" alt="" loading="lazy">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -74,6 +67,89 @@
         </ul>
       </div>
     </nav>
+
+
+    <selection>
+      <div class="container">
+          <div class="row ">
+              <div class="col text-center">
+              <h1>produk</h1>
+              <br><br>
+              </div>
+          </div>
+      
+      <div class="row">
+          <div class="col">
+                     <div class="card border-dark mb-3" style="width: 21rem; height: 30rem;">
+                      <img class="card-img-top"  width="200" height="350" src="gambar nya/susu.jpg" class="card-img-top" alt="card img cap">
+                          <div class="card-body">
+                            <h5 class="card-title" style="text-align: center;">Indomilk</h5>
+                          </div>
+                  </div>
+          </div>
+      
+          <div class="col">
+                   <div class="card border-dark mb-3" style="width: 21rem; height: 30rem;">
+                          <img class="card-img-top"  width="200" height="350" src="gambar nya/indomie.png" class="card-img-top" alt="card img cap">
+                          <div class="card-body">
+                            <h5 class="card-title" style="text-align: center;">Indomie</h5>
+                          </div>
+                  </div>
+          </div>
+  
+          <div class="col">
+                   <div class="card border-dark mb-3" style="width: 23rem; height: 30rem;">
+                          <img class="card-img-top"  width="200" height="350" src="gambar nya/saos.jpg" class="card-img-top" alt="card img cap">
+                          <div class="card-body">
+                            <h5 class="card-title" style="text-align: center;">Saus Sambal</h5>
+                          </div>
+                  </div>
+          </div>
+          
+    
+  
+      </div>
+      
+      </div>
+      <selection>
+        <div class="container">
+            <div class="row ">
+                <div class="col text-center">
+                
+                </div>
+            </div>
+        
+        <div class="row">
+            <div class="col">
+                       <div class="card border-dark mb-3" style="width: 21rem; height: 30rem;">
+                        <img class="card-img-top" width="200" height="350" src="gambar nya/kecap.jpg" class="card-img-top" alt="card img cap">
+                            <div class="card-body">
+                              <h5 class="card-title" style="text-align: center;">Kecap Manis</h5>
+                            </div>
+                    </div>
+            </div>
+        
+            <div class="col">
+                     <div class="card border-dark mb-3" style="width: 21rem; height: 30rem;">
+                            <img class="card-img-top"  width="200" height="350" src="gambar nya/nasigoreng.jpg" class="card-img-top" alt="card img cap">
+                            <div class="card-body">
+                              <h5 class="card-title" style="text-align: center;">Bumbu Racik</h5>
+                            </div>
+                    </div>
+            </div>
+    
+            <div class="col">
+                     <div class="card border-dark mb-3" style="width: 23rem; height: 30rem;">
+                            <img class="card-img-top"  width="200" height="350" src="gambar nya/snack.jpg" class="card-img-top" alt="card img cap">
+                            <div class="card-body">
+                              <h5 class="card-title" style="text-align: center;">Snack</h5>
+                            </div>
+                    </div>
+            </div>
+            
+      
+    
+        </div>
 
 
 <div class="container mt-4 border border-dark rounded" style="background-color:white;">
@@ -231,7 +307,7 @@
                   "<td>" + matauang + hargaproduk[i] + "</td>" +
                   "<td>" + satuan[i] + "</td>" +
                   "<td>" + kategori[i] + "</td>" +
-                  "<td>" + "<img src ='" + gambarproduk[i] +"'style='width: 100px height: 100px'alt=gambar'>" + "</td>"+
+                  "<td>" + "<img src ='" + gambarproduk[i] +"'style='width: 100px height: 100px 'alt=gambar'>" + "</td>"+
                   "<td class="+bg+">" + stokawal[i] + "</td>" +
                   "<td>" +
                   "<button class='btn btn-warning'onclick='editdata(" + i +
