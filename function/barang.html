@@ -33,7 +33,7 @@
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="#header">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#Produk">Produk</a>
@@ -44,72 +44,87 @@
         </ul>
       </div>
     </nav>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <img src="Logoindofoot.png" width="100" height="30" alt="" loading="lazy">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav">
-          <li class="nav-item active">
-            <a class="nav-link" href="#carouselExampleCaptions">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#About">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#Produk">Produk</a>
-          </li>
-          </li>
-        </ul>
+
+<!-- carousel nya -->
+<br id="header"><br>
+    <div id="carouselExampleCaptions" class="carousel slide " data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+        <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="gambar nya/Logoindofoot.png" height="500" class="d-block w-100" alt="...">
+          <br>
+          <div class="carousel-caption d-none d-md-block"> 
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="gambar nya/bumbu.jpg" height="500" class="d-block w-100" alt="...">
+          <br>
+          <div class="carousel-caption d-none d-md-block">  
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="gambar nya/Web-Banner.jpg" height="500" class="d-block w-100" alt="...">
+          <br>
+          <div class="carousel-caption d-none d-md-block">  
+          </div>
+        </div>
       </div>
-    </nav>
+      <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only icon-dark">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+
   <!-- produk nya -->
     <br> <br> <br> <br> <br id="Produk"> <br>
     <selection>
         <div class="container">
             <div class="row ">
                 <div class="col text-center">
-                <h1>produk</h1>
+                <h1>Produk</h1>
                 <br><br>
                 </div>
             </div>
         
         <div class="row">
             <div class="col">
-                       <div class="card border-dark mb-3" style="width: 21rem; height: 30rem;">
+                       <div class="card border-dark mb-3 bg-dark" style="width: 21rem; height: 30rem;">
                         <img class="card-img-top"  width="200" height="350" src="gambar nya/susu.jpg" class="card-img-top" alt="card img cap">
                             <div class="card-body">
-                              <h5 class="card-title" style="text-align: center;">Indomilk</h5>
+                              <h5 class="card-title" style="text-align: center; color: white;">Indomilk</h5>
                               <a href="#formulir" class="btn btn-primary">beli</a>
                             </div>
                     </div>
             </div>
         
             <div class="col">
-                     <div class="card border-dark mb-3" style="width: 21rem; height: 30rem;">
+                     <div class="card border-dark mb-3 bg-dark" style="width: 21rem; height: 30rem;">
                             <img class="card-img-top"  width="200" height="350" src="gambar nya/indomie.png" class="card-img-top" alt="card img cap">
                             <div class="card-body">
-                              <h5 class="card-title" style="text-align: center;">Indomie</h5>
+                              <h5 class="card-title" style="text-align: center; color: white;">Indomie</h5>
                               <a href="#formulir" class="btn btn-primary">beli</a>
                             </div>
                     </div>
             </div>
     
             <div class="col">
-                     <div class="card border-dark mb-3" style="width: 23rem; height: 30rem;">
+                     <div class="card border-dark mb-3 bg-dark" style="width: 23rem; height: 30rem;">
                             <img class="card-img-top"  width="200" height="350" src="gambar nya/saos.jpg" class="card-img-top" alt="card img cap">
                             <div class="card-body">
-                              <h5 class="card-title" style="text-align: center;">Saus Sambal</h5>
+                              <h5 class="card-title" style="text-align: center; color: white;">Saus Sambal</h5>
                               <a href="#formulir" class="btn btn-primary">beli</a>
                             </div>
                     </div>
             </div>
-            
-      
-    
         </div>
-        
         </div>
         <selection>
           <div class="container">
@@ -121,51 +136,51 @@
           
           <div class="row">
               <div class="col">
-                         <div class="card border-dark mb-3" style="width: 21rem; height: 30rem;">
+                         <div class="card border-dark mb-3 bg-dark" style="width: 21rem; height: 30rem;">
                           <img class="card-img-top" width="200" height="350" src="gambar nya/kecap.jpg" class="card-img-top" alt="card img cap">
                               <div class="card-body">
-                                <h5 class="card-title" style="text-align: center;">Kecap Manis</h5>
+                                <h5 class="card-title" style="text-align: center; color: white;">Kecap Manis</h5>
                                 <a href="#formulir" class="btn btn-primary">beli</a>
                               </div>
                       </div>
               </div>
           
               <div class="col">
-                       <div class="card border-dark mb-3" style="width: 21rem; height: 30rem;">
+                       <div class="card border-dark mb-3 bg-dark" style="width: 21rem; height: 30rem;">
                               <img class="card-img-top"  width="200" height="350" src="gambar nya/nasigoreng.jpg" class="card-img-top" alt="card img cap">
                               <div class="card-body">
-                                <h5 class="card-title" style="text-align: center;">Bumbu Racik</h5>
+                                <h5 class="card-title" style="text-align: center; color: white;">Bumbu Racik</h5>
                                 <a href="#formulir" class="btn btn-primary">beli</a>
                               </div>
                       </div>
               </div>
       
               <div class="col">
-                       <div class="card border-dark mb-3" style="width: 23rem; height: 30rem;">
+                       <div class="card border-dark mb-3 bg-dark" style="width: 23rem; height: 30rem;">
                               <img class="card-img-top"  width="200" height="350" src="gambar nya/snack.jpg" class="card-img-top" alt="card img cap">
                               <div class="card-body">
-                                <h5 class="card-title" style="text-align: center;">Snack</h5>
+                                <h5 class="card-title" style="text-align: center; color: white;">Snack</h5>
                                 <a href="#formulir" class="btn btn-primary">beli</a>
                               </div>
                       </div>
               </div>
-              
-        
-      
           </div>
-          
           </div>
 
 <!-- formulir nya -->
 <br> <br> <br> <br> <br id="formulir"> <br>
-<div class="container mt-4 border border-dark rounded" style="background-color:white;">
+<div class="col text-center">
+  <h1>FORMULIR</h1>
+  <br><br>
+  </div>
+<div class="container mt-4 border border-dark rounded bg-secondary" style="background-color:white;">
 <div class="container p-2">
-    <h4><center>FORM INPUT MASTER DAN STOCK DATA BARANG</center></h4>
+    <h4><center>FORM INPUT INDOFOOD DAN STOCK DATA PRODUK</center></h4>
  
         <div class="form-group row mt-4">
           <label for="kodeproduk" class="col-sm-3  col-form-label">Kode Produk</label>
           <div class="col-sm-6">
-          <input type class="mb-2 kode_pro mt-2" id="txt_kodeproduk"  disabled>
+          <input type class="mb-2 kode_pro mt-2 bg-secondary" id="txt_kodeproduk" style="color: black;"  disabled>
           </div>
         </div>
 
@@ -236,11 +251,11 @@
           <thead class="table-secondary">
             <tr>
               <th scope="col">No</th>
-              <th scope="col">kode produk</th>
-              <th scope="col">nama produk</th>
-              <th scope="col">harga produk</th>
-              <th scope="col">satuan</th>
-              <th scope="col">kategori</th>
+              <th scope="col">Kode Produk</th>
+              <th scope="col">Nama Produk</th>
+              <th scope="col">Harga Produk</th>
+              <th scope="col">Satuan</th>
+              <th scope="col">Kategori</th>
               <th scope="col">Gambar Produk</th>
               <th scope="col">Stok Produk</th>
               <th scope="col">Action</th>
@@ -307,7 +322,7 @@
                   "<td>" + matauang + hargaproduk[i] + "</td>" +
                   "<td>" + satuan[i] + "</td>" +
                   "<td>" + kategori[i] + "</td>" +
-                  "<td>" + "<img src ='" + gambarproduk[i] +"'style='width: 100px height: 100px 'alt=gambar'>" + "</td>"+
+                  "<td>" + "<img src ='" + gambarproduk[i] +"' style='width: 100px; height: 100px;'alt=gambar>" + "</td>"+
                   "<td class="+bg+">" + stokawal[i] + "</td>" +
                   "<td>" +
                   "<button class='btn btn-warning'onclick='editdata(" + i +
