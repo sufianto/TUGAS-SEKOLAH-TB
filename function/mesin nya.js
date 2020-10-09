@@ -57,7 +57,9 @@ if (namapro == "") {
           "<td>" +
           "<button class='btn btn-warning mt-2 mr-1'onclick='editdata(" + i +
           ")'>Edit</button>" +
-          "<button class='btn btn-danger mt-2' href='#' onclick='hapusdata(" + i + ")'>Hapus</button>" +
+          "<button class='btn btn-danger mt-2 mr-1'' href='#' onclick='hapusdata(" + i + ")'>Hapus</button>" +
+          "<button class='btn btn-primary mt-2 mr-1' data-toggle='modal' data-target='#modal' onclick='detaildata(" + i +
+                  ")'>Detail</button>" +
           "</td>" +
           "</tr>"
 
@@ -215,4 +217,36 @@ if (count < 10) {
     document.getElementById("txt_kodeproduk").value = kodepr + '-' + count
 }
 }
+}
+
+var index = []
+
+function detaildata(i) {
+  document.getElementById('modalproduk').value = kodeproduk[i]
+  document.getElementById('modalnama').value = namaproduk[i]
+  document.getElementById('modalharga').value = hargaproduk[i]
+  document.getElementById('modalsatuan').value = satuan[i]
+  document.getElementById('modalkategori').value = kategori[i]
+  document.getElementById('modalstok').value = stokawal[i]
+
+  index.push(i)
+}
+
+function datasimpan() {
+  var simpanproduk =  document.getElementById('modalproduk').value
+  var simpannama = document.getElementById('modalnama').value
+  var simpanharga = document.getElementById('modalharga').value
+  var simpansatuan = document.getElementById('modalsatuan').value
+  var simpankategori = document.getElementById('modalkategori').value
+  var simpanstok = document.getElementById('modalstok').value
+
+  kodeproduk[index] = simpanproduk
+  namaproduk[index] = simpannama
+  hargaproduk[index] = simpanharga
+  satuan[index] = simpansatuan
+  kategori[index] = simpankategori
+  stokawal[index] = simpanstok
+
+  showData()
+  index.pop()
 }
