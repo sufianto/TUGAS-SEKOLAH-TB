@@ -232,7 +232,7 @@ function detaildata(i) {
   index.push(i)
 }
 
-function datasimpan() {
+function datasimpandetail() {
   var simpanproduk =  document.getElementById('modalproduk').value
   var simpannama = document.getElementById('modalnama').value
   var simpanharga = document.getElementById('modalharga').value
