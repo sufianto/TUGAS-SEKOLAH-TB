@@ -4,6 +4,7 @@ if (namapro == "") {
     document.getElementById("button2").style.display = "none"
     document.getElementById("button").style.display = "none"
 }
+
     var kodeproduk = ['MB-001']
     var namaproduk = ['Indomie']
     var hargaproduk = ['2000']
